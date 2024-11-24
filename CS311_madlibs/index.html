@@ -1,0 +1,77 @@
+<!---
+--This code sets up a mad-lib page that asks the user for input 
+--and then creates a mad lib. There is a return button to reset 
+--the page and two images. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John's Mad Libs</title>
+    <!--
+    --Task: incorporates the css file that modifies color 
+    --and webpage presentation.
+    -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>John's Mad Lib!</h1>
+    </header>
+    <main>
+        <div id="content-wrapper">
+            <!--
+            --Task: creates an image and assigns it to a variable named left-image.
+            -->
+            <img src="img/lightbulb.jpg" alt="Lightbulb Image" id="left-image">
+
+            <!--
+            --Tasks: creates an interactive, scanning section of the page that 
+            --prompts user to enter various words for each of the madlib spaces. 
+            --Uses the "placeholder" text to prompt user for part of speach/word 
+            --input.
+            --@return must have input in each box to run code.  
+            -->
+            <div id="input-section">
+                <form id="madlibs-form">
+                    <p>Enter the words for your Mad Lib:</p>
+                    <input type="text" placeholder="verb" id="word1" required>
+                    <input type="text" placeholder="noun" id="word2" required>
+                    <input type="text" placeholder="verb" id="word3" required>
+                    <input type="text" placeholder="Number" id="word4" required>
+                    <input type="text" placeholder="Plural noun" id="word5" required>
+                    <input type="text" placeholder="negative emotion" id="word6" required>
+                    <input type="text" placeholder="size adjective" id="word7" required>
+                    <input type="text" placeholder="noun" id="word8" required>
+                    <input type="text" placeholder="verb" id="word9" required>
+                    <input type="text" placeholder="storage container" id="word10" required>
+                    <input type="text" placeholder="weather phrase" id="word11" required>
+                    <input type="text" placeholder="verb" id="word12" required>
+                    <!--
+                    --Programmer's Observation: this is case sensitive! It took me a day to realize the "G is lowercase in my js file."
+                    -->
+                    <button type="button" id="generate">Create Madlib!</button>
+                </form>
+            </div>
+            <!--
+            --Task: creates the next section after input is entered. Provides "reset" option
+            --to create new madlib. 
+            -->
+            <div id="output-section" style="display: none;">
+                <p id="madlib-result"></p>
+                <button id="reset">Reset</button>
+            </div>
+
+            <!-- 
+            --Image for the right part of my screen of my madlib. 
+             -->
+            <img src="img/result.jpg" alt="Result Image" id="right-image">
+        </div>
+        
+    </main>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
